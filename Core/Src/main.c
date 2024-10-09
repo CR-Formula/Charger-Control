@@ -9,5 +9,11 @@
 #include "main.h"
 
 void main() {
-  
+    // Configure System
+    Sysclock_48();
+
+    // Main Loop
+    while(1) {
+        
+    }
 }
