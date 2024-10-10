@@ -45,6 +45,8 @@ CAN_Status CAN_Init();
 
 /**
  * @brief Initalize CAN Filters
+ * @note Set to just accept all, see TODO
+ * @todo Create board specific filters and a way to select them
  * 
  * @return CAN_Status 
  */

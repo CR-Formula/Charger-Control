@@ -13,9 +13,6 @@ void Sysclock_48() {
     FLASH->ACR |= (0x1 << FLASH_ACR_LATENCY_Pos);
     FLASH->ACR |= FLASH_ACR_PRFTBE;
 
-    // Remap PA11 and PA12 to PA9 and PA10
-    SYSCFG->CFGR1 |= SYSCFG_CFGR1_PA11_PA12_RMP; 
-
     // Enable HSI48
     RCC->CR2 |= RCC_CR2_HSI48ON;
     while(!(RCC->CR2 & RCC_CR2_HSI48RDY));
