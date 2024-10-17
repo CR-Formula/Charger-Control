@@ -5,7 +5,7 @@
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
             "preLaunchCommands": ["make -j8"],
-            "executable": "./build/Lora_Receiver.elf",
+            "executable": "./build/Charger-Control.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stutil",
