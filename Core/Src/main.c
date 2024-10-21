@@ -11,9 +11,18 @@
 void main() {
     // Configure System
     Sysclock_48();
+    CAN_Init();
+    CAN_Filters_Init();
+    CAN_Start();
+
+    CAN_Status CANstatus;
+    volatile CAN_Frame rFrame;
 
     // Main Loop
     while(1) {
-        
+        CANstatus = CAN_Receive(&rFrame);
+        if (CANstatus == CAN_OK) {
+            // Process Charger Frame
+        }
     }
 }
