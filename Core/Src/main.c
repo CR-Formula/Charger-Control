@@ -17,11 +17,11 @@ void main() {
 
     CAN_Status CANstatus;
     volatile CAN_Frame rFrame;
-
+    
     // Main Loop
     while(1) {
-        CANstatus = CAN_Receive(&rFrame);
-        if (CANstatus == CAN_OK) {
+        CAN_Transmit(&rFrame);
+        if (CAN_Receive(&rFrame) == CAN_OK) {
             // Process Charger Frame
         }
     }
